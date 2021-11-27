@@ -24,13 +24,22 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 100,
+    growEditionSizeTo: 10,
     layersOrder: [
       { name: "Backgrounds" },
       { name: "Bodies" },
       { name: "Heads" },
       { name: "Hats" },
-    ],
+    ]
+  },
+  {
+    growEditionSizeTo: 20,
+    layersOrder: [
+      { name: "Background_Image" },
+      { name: "Bodies" },
+      { name: "Heads" },
+      { name: "Hats" },
+    ]
   },
 ];
 
@@ -65,7 +74,7 @@ const text = {
 };
 
 const pixelFormat = {
-  ratio: 2 / 128,
+  ratio: 20 / 128,
 };
 
 const background = {
