@@ -44,6 +44,15 @@ const layerConfigurations = [
       { name: "Hats" },
     ]
   },
+  {
+    growEditionSizeTo: 20,
+    layersOrder: [
+      { name: "Backgrounds" },
+      { name: "Bodies" },
+      { name: "Heads" },
+      // { name: "Hats" },
+    ]
+  },
 ];
 //This shuffles the configs above
 const shuffleLayerConfigurations = true;
