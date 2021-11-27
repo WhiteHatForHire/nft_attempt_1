@@ -5,8 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
+const namePrefix = "Bobble Boys";
+const description = "A collection of larger than life people you know and love, fully bobble-licous";
+// Base URI is important
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
@@ -22,6 +23,8 @@ const solanaMetadata = {
 };
 
 // If you have selected Solana then the collection starts from 0 automatically
+// Having layer configs that are only '1' config would make that a 100% unique mint. It can be presaved as a single file image in a folder named something unique. That will be one of a kind.
+// Likewise, you can have as many editions below as you want. For fish types, each would be their own edition.
 const layerConfigurations = [
   {
     growEditionSizeTo: 10,
@@ -33,7 +36,7 @@ const layerConfigurations = [
     ]
   },
   {
-    growEditionSizeTo: 20,
+    growEditionSizeTo: 11,
     layersOrder: [
       { name: "Background_Image" },
       { name: "Bodies" },
@@ -42,11 +45,12 @@ const layerConfigurations = [
     ]
   },
 ];
-
-const shuffleLayerConfigurations = false;
+//This shuffles the configs above
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
+// Image size for generated image
 const format = {
   width: 512,
   height: 512,
@@ -84,10 +88,15 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {};
+// You can add extra metaData here
+const extraMetadata = {
+// key: "ValuePair"
+};
 
+// Character to deliminate rarity
 const rarityDelimiter = "#";
 
+// Program fails if you don't have enough layers to make 10,000 variations
 const uniqueDnaTorrance = 10000;
 
 const preview = {
