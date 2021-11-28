@@ -7,8 +7,8 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "Bobble Boys";
 const description = "A collection of larger than life people you know and love, fully bobble-licous";
-// Base URI is important
-const baseUri = "ipfs://NewUriToReplace";
+// Base URI is CID from IPFS (pinata for this example was used)
+const baseUri = "ipfs://Qmbi89AP3mMyBz2YoHsNxdhU4d3pM1giJSkutggjzMhEyQ";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -27,7 +27,7 @@ const solanaMetadata = {
 // Likewise, you can have as many editions below as you want. For fish types, each would be their own edition.
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 25,
     layersOrder: [
       { name: "Backgrounds" },
       { name: "Bodies" },
@@ -36,16 +36,7 @@ const layerConfigurations = [
     ]
   },
   {
-    growEditionSizeTo: 11,
-    layersOrder: [
-      { name: "Background_Image" },
-      { name: "Bodies" },
-      { name: "Heads" },
-      { name: "Hats" },
-    ]
-  },
-  {
-    growEditionSizeTo: 20,
+    growEditionSizeTo: 30,
     layersOrder: [
       { name: "Backgrounds" },
       { name: "Bodies" },
